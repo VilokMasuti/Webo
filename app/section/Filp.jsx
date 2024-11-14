@@ -1,8 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from 'next/image';
+import LocomotiveScroll from 'locomotive-scroll';
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
+import { useEffect } from 'react';
 const cardData = [
   { number: "1", title: "Asset Listing", icon: '/assets/one.png', frontContent: "List Assets", backContent: "View Asset Details", color: "" },
   {
@@ -17,6 +19,14 @@ const cardData = [
 ];
 
 const Flip = () => {
+  useEffect(() => {
+    const locomotiveScroll = new LocomotiveScroll();
+
+    // Cleanup to prevent memory leaks
+    return () => {
+      locomotiveScroll.destroy();
+    };
+  }, []);
   const leftColumn = cardData.slice(0, 4);
   const rightColumn = cardData.slice(4);
 

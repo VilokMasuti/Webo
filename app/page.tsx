@@ -1,9 +1,19 @@
+'use client'
 import React from 'react'
 import Home from './section/Home'
-
+import LocomotiveScroll from 'locomotive-scroll'
 import Filp from './section/Filp'
+import { useEffect } from 'react'
 import Stacking from './section/Stacking'
-const page = () => {
+const Page = () => {
+  useEffect(() => {
+    const locomotiveScroll = new LocomotiveScroll()
+
+    // Cleanup to prevent memory leaks
+    return () => {
+      locomotiveScroll.destroy()
+    }
+  }, [])
   return (
     <main className=" w-full h-screen  ">
       <section
@@ -18,4 +28,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
