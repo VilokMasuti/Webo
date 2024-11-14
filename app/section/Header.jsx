@@ -1,21 +1,18 @@
-"use client"
-import React from 'react'
+'use client';
 
-import Image from 'next/image'
+import React from 'react';
+import Image from 'next/image';
 import { FaCaretDown } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import {
   Sheet,
   SheetContent,
-
   SheetTrigger,
-} from "@/components/ui/sheet"
+} from "@/components/ui/sheet";
 import { motion } from 'framer-motion';
 
 const Header = () => {
-
   return (
-
     <section className="w-full fixed bg-slate-50 shadow-lg z-10 h-[80px]">
       {/* Desktop View */}
       <div className="max-sm:hidden flex items-center justify-between mt-4">
@@ -93,7 +90,6 @@ const Header = () => {
         >
           <button
             className="group bg-[#0a2545] flex items-center border-[#0a2545] border-2 hover:bg-white hover:text-[#0a2545] duration-1000 text-white px-3 py-3 rounded"
-
           >
             Sign up
             <span className="mt-1 pl-2 duration-1000 rotate-[-37deg] group-hover:rotate-[3deg]">
@@ -102,7 +98,6 @@ const Header = () => {
           </button>
           <button
             className="group bg-[#0a2545] flex items-center border-[#0a2545] border-2 hover:bg-white hover:text-[#0a2545] duration-1000 text-white px-3 py-3 rounded"
-
           >
             Schedule Meeting
             <span className="mt-1 pl-2 duration-1000 rotate-[-37deg] group-hover:rotate-[3deg]">
@@ -111,7 +106,6 @@ const Header = () => {
           </button>
         </motion.div>
       </div>
-
 
       {/* //! Mobile view */}
       <div className="flex items-center justify-between max-sm:px-4 max-sm:py-2 md:hidden lg:hidden">
@@ -154,9 +148,8 @@ const Header = () => {
           </Sheet>
         </div>
       </div>
-
     </section>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
