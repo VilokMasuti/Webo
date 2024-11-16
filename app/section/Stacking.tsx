@@ -24,7 +24,7 @@ const Stacking = () => {
   const y3 = useTransform(scrollYProgress, [0.66, 1], ['100%', '0%'])
 
   // Opacity transforms based on scroll position
-  const opacity1 = useTransform(scrollYProgress, [0, 0.2, 0.33], [0, 1, 1])
+  const opacity1 = useTransform(scrollYProgress, [0.33, 0.2, 0.33], [0, 1, 1])
   const opacity2 = useTransform(scrollYProgress, [0.33, 0.5, 0.66], [0, 1, 1])
   const opacity3 = useTransform(scrollYProgress, [0.66, 0.8, 1], [0, 1, 1])
 
@@ -106,7 +106,7 @@ const Stacking = () => {
         </motion.div>
 
         {/* Right Section */}
-        <div className="w-[35%] h-[45%] relative ml-[100px] mt-[150px]">
+        <div className="w-[35%] h-[45%] relative ml-[100px] mt-[120px]">
           {/* Right section images */}
           {[
             {
